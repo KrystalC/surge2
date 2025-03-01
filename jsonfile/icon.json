@@ -2,8 +2,12 @@
   "name": "Syrup Icon Set",
   "icons": [
     {
-      "name": "grok",
+      "name": "grok.png",
       "url": "https://raw.githubusercontent.com/KrystalC/surge2/refs/heads/main/icon/grok.png"
+    },
+    {
+      "name": "grok_low.png",
+      "url": "https://raw.githubusercontent.com/KrystalC/surge2/refs/heads/main/icon/grok_low.png"
     }
   ]
 }
