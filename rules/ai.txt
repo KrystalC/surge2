@@ -84,7 +84,7 @@ DOMAIN-SUFFIX,edgeservices.bing.com
 # Grok AI (xAI)
 DOMAIN,x.ai
 DOMAIN,grok.x.ai
-DOMAIN,grok.com
+DOMAIN-SUFFIX,grok.com
 DOMAIN,api.x.ai
 DOMAIN,x.com
 DOMAIN,api.x.com
