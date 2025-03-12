@@ -125,6 +125,9 @@ DOMAIN,api.huggingface.co
 DOMAIN,anthropic.com
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN,api.anthropic.com
+DOMAIN-SUFFIX,claude.ai
+
+
 
 # Other AIGC Services (Cloudflare AI, Clipdrop, Dify, Groq, Jasper, Meta AI, OpenArt, Perplexity, Poe)
 DOMAIN,gateway.ai.cloudflare.com
