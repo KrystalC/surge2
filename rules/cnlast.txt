@@ -1,0 +1,7 @@
+DOMAIN-SUFFIX,ggpht.com
+DOMAIN,music.811861.xyz // Added for: music.811861.xyz:443
+
+# ai
+DOMAIN-SUFFIX,ffa.chat
+DOMAIN-SUFFIX,deepseek.com
+
