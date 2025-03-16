@@ -128,8 +128,6 @@ DOMAIN-SUFFIX,anthropic.com
 DOMAIN,api.anthropic.com
 DOMAIN-SUFFIX,claude.ai
 
-
-
 # Other AIGC Services (Cloudflare AI, Clipdrop, Dify, Groq, Jasper, Meta AI, OpenArt, Perplexity, Poe)
 DOMAIN,gateway.ai.cloudflare.com
 DOMAIN,api.github.com
@@ -155,5 +153,18 @@ IP-CIDR,24.199.123.28/32,no-resolve
 IP-CIDR,64.23.132.171/32,no-resolve
 IP-ASN,14061,no-resolve
 IP-ASN,20473,no-resolve
+
+# Additional Rules from File 1
+DOMAIN,gemini.google.com
+DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN,cdn.usefathom.com
+DOMAIN-SUFFIX,grazie.ai
+DOMAIN-SUFFIX,grazie.aws.intellij.net
+DOMAIN,imagine.meta.com
+DOMAIN,chat.mistral.ai
+DOMAIN,console.mistral.ai
+DOMAIN-SUFFIX,mistral.ai
+DOMAIN-SUFFIX,coze.com
+DOMAIN-KEYWORD,aistudio
 
 ################## EOF ##################
