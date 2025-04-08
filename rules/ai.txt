@@ -104,6 +104,10 @@ DOMAIN,api.pika.art
 DOMAIN,static.pika.art
 DOMAIN,pika-art.s3.amazonaws.com
 
+# manus
+DOMAIN-SUFFIX,manus.im
+DOMAIN-SUFFIX,manuscdn.com
+
 # Runway
 DOMAIN,runwayml.com
 DOMAIN-SUFFIX,runwayml.com
