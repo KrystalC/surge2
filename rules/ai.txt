@@ -104,6 +104,7 @@ DOMAIN,api.pika.art
 DOMAIN,static.pika.art
 DOMAIN,pika-art.s3.amazonaws.com
 
+
 # Runway
 DOMAIN,runwayml.com
 DOMAIN-SUFFIX,runwayml.com
@@ -117,6 +118,13 @@ DOMAIN-SUFFIX,stability.ai
 DOMAIN,api.stability.ai
 DOMAIN,cdn.stability.ai
 
+# agent
+# manus
+DOMAIN-SUFFIX,manus.im
+DOMAIN-SUFFIX,manuscdn.com
+
+
+# module.etc
 # Hugging Face
 DOMAIN,huggingface.co
 DOMAIN-SUFFIX,huggingface.co
