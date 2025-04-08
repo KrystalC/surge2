@@ -1,1 +1,3 @@
-# bbsDOMAIN-SUFFIX,hdhive.online
+# bbs
+DOMAIN-SUFFIX,hdhive.online# pt
+DOMAIN-SUFFIX,ubits.club
