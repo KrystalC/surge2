@@ -63,6 +63,8 @@ DOMAIN-KEYWORD,colab
 DOMAIN-KEYWORD,developerprofiles
 DOMAIN-KEYWORD,generativelanguage
 DOMAIN-KEYWORD,alkalimakersuite-pa.clients6.google.com
+DOMAIN,gemini.google.com
+DOMAIN-KEYWORD,aistudio
 
 # Microsoft AI (Copilot, Bing AI)
 DOMAIN,api.msn.com
@@ -164,7 +166,7 @@ IP-ASN,14061,no-resolve
 IP-ASN,20473,no-resolve
 
 # Additional Rules from File 1
-DOMAIN,gemini.google.com
+
 DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
 DOMAIN,cdn.usefathom.com
 DOMAIN-SUFFIX,grazie.ai
@@ -173,7 +175,18 @@ DOMAIN,imagine.meta.com
 DOMAIN,chat.mistral.ai
 DOMAIN,console.mistral.ai
 DOMAIN-SUFFIX,mistral.ai
+
+
+
+## Domastic Ai overseas
+## deepseek
+DOMAIN-SUFFIX,deepseek.com
+
+## ByteDance
 DOMAIN-SUFFIX,coze.com
-DOMAIN-KEYWORD,aistudio
+
+
+
+
 
 ################## EOF ##################
