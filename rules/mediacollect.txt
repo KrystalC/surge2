@@ -1,3 +1,7 @@
 # bbs
 DOMAIN-SUFFIX,hdhive.online# pt
 DOMAIN-SUFFIX,ubits.club
+
+
+# BBS
+DOMAIN-SUFFIX,invites.fun
