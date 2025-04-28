@@ -185,6 +185,9 @@ DOMAIN-SUFFIX,deepseek.com
 ## ByteDance
 DOMAIN-SUFFIX,coze.com
 
+# > codedex.io
+DOMAIN-SUFFIX,codedex.io
+
 
 
 
