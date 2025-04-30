@@ -1,10 +1,31 @@
 #########################################
-# AI 服务访问规则（仅兼容 Surge 语法）
+# AI 服务访问规则（Surge 语法，仅域名规则）
 # 整理时间：2025-04-30
+# 说明：请将以下规则指向"Proxy"策略组，以保证 AI 平台正常访问
 #########################################
 
-# === OpenAI (ChatGPT, Sora, Whisper 等) ===
-# 要求：强制美区IP，代理透明度要求高，部分CDN节点封锁代理标识
+# A. 通用基础服务
+## A1. 认证 & 配发平台
+# 用于登录认证、功能配置下发和统计上报
+DOMAIN-SUFFIX, auth0.com
+DOMAIN-SUFFIX, azureedge.net
+DOMAIN-SUFFIX, azurewebsites.net
+DOMAIN-SUFFIX, algolia.net
+DOMAIN-SUFFIX, launchdarkly.com
+DOMAIN-SUFFIX, segment.io
+DOMAIN-SUFFIX, sentry.io
+
+## A2. 通用 CDN & 分析
+# 常见 CDN 加速与网站分析
+DOMAIN, cdn.usefathom.com
+DOMAIN-SUFFIX, s3.amazonaws.com
+DOMAIN-SUFFIX, cloudfront.net
+DOMAIN-SUFFIX, cloudflare.com
+DOMAIN-SUFFIX, challenges.cloudflare.com
+
+# B. 文本对话 & 生成服务
+## B1. OpenAI (ChatGPT, Sora, Whisper)
+# 需美区 IP，部分 CDN 会封锁大陆流量
 DOMAIN, browser-intake-datadoghq.com
 DOMAIN, chat.openai.com
 DOMAIN, chat.openai.com.cdn.cloudflare.net
@@ -27,29 +48,22 @@ DOMAIN-SUFFIX, turn.livekit.cloud
 DOMAIN-SUFFIX, api.statsig.com
 DOMAIN-SUFFIX, events.statsigapi.net
 DOMAIN-SUFFIX, featuregates.org
-DOMAIN-SUFFIX, auth0.com
-DOMAIN-SUFFIX, algolia.net
-DOMAIN-SUFFIX, identrust.com
-DOMAIN-SUFFIX, intercom.io
-DOMAIN-SUFFIX, intercomcdn.com
-DOMAIN-SUFFIX, launchdarkly.com
-DOMAIN-SUFFIX, segment.io
-DOMAIN-SUFFIX, sentry.io
-DOMAIN-SUFFIX, stripe.com
-DOMAIN-SUFFIX, observeit.net
 DOMAIN-KEYWORD, openai
 DOMAIN-KEYWORD, openaicom-api
 IP-CIDR, 24.199.123.28/32,no-resolve
 IP-CIDR, 64.23.132.171/32,no-resolve
 IP-ASN, 20473,no-resolve
 
-# === Google AI (Gemini, Bard, NotebookLM 等) ===
-# 要求：强制使用 Google 原生IP 或美国代理，部分区域已启用 IP 白名单
+## B2. Google AI (Gemini, Bard, NotebookLM, Vertex AI)
+# 强制使用官方 IP 或美国代理
 DOMAIN, gemini.google.com
 DOMAIN, ai.google.dev
 DOMAIN, bard.google.com
 DOMAIN, makersuite.google.com
 DOMAIN, alkalimakersuite-pa.clients6.google.com
+DOMAIN-SUFFIX, googleapis.com
+DOMAIN-SUFFIX, apis.google.com
+DOMAIN-SUFFIX, gstatic.com
 DOMAIN-SUFFIX, generativeai.google
 DOMAIN-SUFFIX, generativelanguage.googleapis.com
 DOMAIN-SUFFIX, geller-pa.googleapis.com
@@ -57,20 +71,31 @@ DOMAIN-SUFFIX, notebooklm.google.com
 DOMAIN-SUFFIX, deepmind.com
 DOMAIN-SUFFIX, deepmind.google
 DOMAIN-SUFFIX, aistudio.google.com
-DOMAIN-SUFFIX, apis.google.com
-DOMAIN-SUFFIX, googleapis.com
-DOMAIN-SUFFIX, gstatic.com
 DOMAIN-KEYWORD, colab
 DOMAIN-KEYWORD, developerprofiles
 IP-CIDR, 173.194.0.0/16,no-resolve
 IP-CIDR, 74.125.0.0/16,no-resolve
 
-# === Microsoft AI (Copilot, Bing AI 等) ===
+## B3. Anthropic Claude
+# 美国节点，部分地区不支持
+DOMAIN, api.anthropic.com
+DOMAIN-SUFFIX, anthropic.com
+DOMAIN-SUFFIX, claude.ai
+IP-CIDR, 160.79.104.0/21,no-resolve   # AS399358
+IP-ASN, 399358,no-resolve
+
+## B4. Microsoft Copilot & Bing Chat
+# 包括 Azure OpenAI Service 接入
 DOMAIN, copilot.microsoft.com
 DOMAIN, api.msn.com
 DOMAIN, assets.msn.com
 DOMAIN, gateway.bingviz.microsoft.net
 DOMAIN, gateway.bingviz.microsoftapp.net
+DOMAIN-SUFFIX, bing.com
+DOMAIN-SUFFIX, bingapis.com
+DOMAIN-SUFFIX, api.microsoftapp.net
+DOMAIN-SUFFIX, bing-shopping.microsoft-falcon.io
+DOMAIN-SUFFIX, edgeservices.bing.com
 DOMAIN, in.appcenter.ms
 DOMAIN, location.microsoft.com
 DOMAIN, odc.officeapps.live.com
@@ -79,105 +104,78 @@ DOMAIN, self.events.data.microsoft.com
 DOMAIN, services.bingapis.com
 DOMAIN, sydney.bing.com
 DOMAIN, www.bing.com
-DOMAIN-SUFFIX, bing.com
-DOMAIN-SUFFIX, bingapis.com
-DOMAIN-SUFFIX, api.microsoftapp.net
-DOMAIN-SUFFIX, bing-shopping.microsoft-falcon.io
-DOMAIN-SUFFIX, edgeservices.bing.com
 
-# === Anthropic (Claude) ===
-# 要求：美区 IP，非支持地区会被拒绝访问
-DOMAIN, api.anthropic.com
-DOMAIN-SUFFIX, anthropic.com
-DOMAIN-SUFFIX, claude.ai
+## B5. 聚合 & 搜索型聊天
+# 聚合多模型的聊天 & 问答服务
+DOMAIN-SUFFIX, poe.com       # Quora Poe
+DOMAIN-SUFFIX, perplexity.ai # Perplexity AI
+DOMAIN-SUFFIX, pplx.ai       # 旧域名
 
-# === Hugging Face (模型平台) ===
-DOMAIN, api.huggingface.co
-DOMAIN-SUFFIX, huggingface.co
-DOMAIN-SUFFIX, huggingface.com
-DOMAIN-SUFFIX, hf.co
-
-# === Perplexity AI ===
-DOMAIN-SUFFIX, perplexity.ai
-DOMAIN-SUFFIX, pplx.ai
-
-# === Poe (Quora) ===
-DOMAIN-SUFFIX, poe.com
-
-# === Midjourney ===
-DOMAIN, midjourney.com
+# C. 图像 & 视频生成 AI
+## C1. Midjourney & Stable Diffusion 系列
+DOMAIN-SUFFIX, midjourney.com
 DOMAIN, api.midjourney.com
 DOMAIN, static.midjourney.com
 DOMAIN, cdn.midjourney.com
-DOMAIN-SUFFIX, midjourney.com
+DOMAIN-SUFFIX, stability.ai
+DOMAIN, api.stability.ai
+DOMAIN, cdn.stability.ai
 
-# === Runway ML ===
+## C2. Runway ML & Leonardo
+DOMAIN-SUFFIX, runwayml.com
+DOMAIN-SUFFIX, runwayml.cloud
 DOMAIN, api.runwayml.com
 DOMAIN, static.runwayml.com
 DOMAIN, cdn.runwayml.com
-DOMAIN-SUFFIX, runwayml.com
-DOMAIN-SUFFIX, runwayml.cloud
+DOMAIN-SUFFIX, leonardo.ai
 
-# === Pika ===
+## C3. 其他新兴图像平台
+DOMAIN-SUFFIX, mistral.ai
+DOMAIN, chat.mistral.ai
+DOMAIN, console.mistral.ai
+DOMAIN-SUFFIX, dify.ai
+DOMAIN-SUFFIX, pika.art
 DOMAIN, api.pika.art
 DOMAIN, static.pika.art
 DOMAIN, pika-art.s3.amazonaws.com
-DOMAIN-SUFFIX, pika.art
-
-# === Mistral AI ===
-DOMAIN, chat.mistral.ai
-DOMAIN, console.mistral.ai
-DOMAIN-SUFFIX, mistral.ai
-
-# === Meta AI (Imagine) ===
-DOMAIN, imagine.meta.com
+DOMAIN-SUFFIX, openart.ai
 DOMAIN-SUFFIX, meta.ai
-
-# === Coze AI ===
+DOMAIN, imagine.meta.com
 DOMAIN-SUFFIX, coze.com
 
-# === Grok (xAI) ===
-DOMAIN, x.ai
+# D. 音乐 & 音频生成
+DOMAIN-SUFFIX, suno.com
+
+# E. 视频 & 多媒体生成
+# （当前未单独检索出典型独立视频生成平台）
+
+# F. 数据标注 & 平台服务
+DOMAIN-SUFFIX, scale.com
+
+# G. 开发者 & NLP 辅助工具
+DOMAIN-SUFFIX, cohere.com
+DOMAIN-SUFFIX, huggingface.co
+DOMAIN-SUFFIX, huggingface.com
+DOMAIN-SUFFIX, hf.co
+DOMAIN, api.huggingface.co
+
+# H. 校对 & 写作辅助
+DOMAIN-SUFFIX, grazie.ai
+DOMAIN-SUFFIX, grazie.aws.intellij.net
+
+# I. Agent & 自动化平台
+DOMAIN-SUFFIX, manus.im
+DOMAIN-SUFFIX, manuscdn.com
+DOMAIN-SUFFIX, x.ai
 DOMAIN, grok.x.ai
 DOMAIN, api.x.ai
 DOMAIN, api.x.com
 DOMAIN, x.com
-DOMAIN-SUFFIX, x.ai
 DOMAIN-SUFFIX, grok.com
 
-# === Dify、Clipdrop、Jasper 等 AIGC 工具 ===
+# J. 其他 AIGC & 工具
 DOMAIN-SUFFIX, clipdrop.co
-DOMAIN-SUFFIX, dify.ai
 DOMAIN-SUFFIX, jasper.ai
-DOMAIN-SUFFIX, openart.ai
 
-# === 音频/图像/视频生成工具 ===
-DOMAIN-SUFFIX, suno.com
-DOMAIN-SUFFIX, leonardo.ai
-DOMAIN-SUFFIX, stability.ai
-DOMAIN, api.stability.ai
-DOMAIN, cdn.stability.ai
-DOMAIN-SUFFIX, moonvalley.com
-DOMAIN-SUFFIX, moonvalley.ai
-
-# === 编程/语义平台 ===
-DOMAIN-SUFFIX, cohere.com
-DOMAIN-SUFFIX, scale.com
-
-# === 校对/NLP 辅助平台 ===
-DOMAIN-SUFFIX, grazie.ai
-DOMAIN-SUFFIX, grazie.aws.intellij.net
-
-# === Agent / 控制服务平台 ===
-DOMAIN-SUFFIX, manus.im
-DOMAIN-SUFFIX, manuscdn.com
-
-# === 其他依赖服务/CDN ===
-DOMAIN, cdn.usefathom.com
-DOMAIN-SUFFIX, s3.amazonaws.com
-DOMAIN-SUFFIX, cloudfront.net
-DOMAIN-SUFFIX, cloudflare.com
-DOMAIN-SUFFIX, challenges.cloudflare.com
-
-# === 保留的公共 IP / ASN 区间（需代理或特殊处理） ===
-IP-ASN, 14061,no-resolve
+# K. 公共 IP/ASN（DIRECT 或自定义策略）
+IP-ASN, 14061,no-resolve  # Akamai
