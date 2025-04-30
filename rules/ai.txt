@@ -3,7 +3,7 @@
 # 整理时间：2025-04-30
 #########################################
 
-# === OpenAI (ChatGPT, Sora, Whisper 等) ===
+# === OpenAI (ChatGPT, # === OpenAI (ChatGPT, Sora, Whisper 等) ===
 # 要求：强制美区IP，代理透明度要求高，部分CDN节点封锁代理标识
 DOMAIN, browser-intake-datadoghq.com
 DOMAIN, chat.openai.com
@@ -181,3 +181,551 @@ DOMAIN-SUFFIX, challenges.cloudflare.com
 
 # === 保留的公共 IP / ASN 区间（需代理或特殊处理） ===
 IP-ASN, 14061,no-resolve
+>>>>>>>+main
+UFFIX,ai.com
+DOMAIN-SUFFIX,algolia.net
+DOMAIN-SUFFIX,api.statsig.com
+DOMAIN-SUFFIX,auth0.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,chatgpt.livekit.cloud
+DOMAIN-SUFFIX,client-api.arkoselabs.com
+DOMAIN-SUFFIX,events.statsigapi.net
+DOMAIN-SUFFIX,featuregates.org
+DOMAIN-SUFFIX,host.livekit.cloud
+DOMAIN-SUFFIX,identrust.com
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,launchdarkly.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,observeit.net
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,openaicom.imgix.net
+DOMAIN-SUFFIX,segment.io
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,stripecdn.com
+DOMAIN-SUFFIX,turn.livekit.cloud
+DOMAIN-KEYWORD,openai
+DOMAIN-KEYWORD,openaicom-api
+DOMAIN,sora.openai.com
+DOMAIN,dalle.openai.com
+
+# Google AI (Bard, Gemini, MakerSuite, NotebookLM)
+DOMAIN,ai.google.dev
+DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN,makersuite.google.com
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,deepmind.google
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+DOMAIN-SUFFIX,apis.google.com
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,geller-pa.googleapis.com
+DOMAIN-SUFFIX,notebooklm.google
+DOMAIN-SUFFIX,notebooklm.google.com
+DOMAIN-SUFFIX,aistudio.google.com
+DOMAIN-KEYWORD,colab
+DOMAIN-KEYWORD,developerprofiles
+DOMAIN-KEYWORD,generativelanguage
+DOMAIN-KEYWORD,alkalimakersuite-pa.clients6.google.com
+DOMAIN,gemini.google.com
+DOMAIN-KEYWORD,aistudio
+
+# Microsoft AI (Copilot, Bing AI)
+DOMAIN,api.msn.com
+DOMAIN,assets.msn.com
+DOMAIN,copilot.microsoft.com
+DOMAIN,gateway.bingviz.microsoft.net
+DOMAIN,gateway.bingviz.microsoftapp.net
+DOMAIN,in.appcenter.ms
+DOMAIN,location.microsoft.com
+DOMAIN,odc.officeapps.live.com
+DOMAIN,r.bing.com
+DOMAIN,self.events.data.microsoft.com
+DOMAIN,services.bingapis.com
+DOMAIN,sydney.bing.com
+DOMAIN,www.bing.com
+DOMAIN-SUFFIX,api.microsoftapp.net
+DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io
+DOMAIN-SUFFIX,edgeservices.bing.com
+
+# Grok AI (xAI)
+DOMAIN,x.ai
+DOMAIN,grok.x.ai
+DOMAIN-SUFFIX,grok.com
+DOMAIN,api.x.ai
+DOMAIN,x.com
+DOMAIN,api.x.com
+DOMAIN-SUFFIX,x.ai
+
+# Midjourney
+DOMAIN,midjourney.com
+DOMAIN-SUFFIX,midjourney.com
+DOMAIN,api.midjourney.com
+DOMAIN,static.midjourney.com
+DOMAIN,cdn.midjourney.com
+
+# Pika
+DOMAIN,pika.art
+DOMAIN-SUFFIX,pika.art
+DOMAIN,api.pika.art
+DOMAIN,static.pika.art
+DOMAIN,pika-art.s3.amazonaws.com
+
+
+# Runway
+DOMAIN,runwayml.com
+DOMAIN-SUFFIX,runwayml.com
+DOMAIN,api.runwayml.com
+DOMAIN,static.runwayml.com
+DOMAIN,cdn.runwayml.com
+
+# Stable Diffusion
+DOMAIN,stability.ai
+DOMAIN-SUFFIX,stability.ai
+DOMAIN,api.stability.ai
+DOMAIN,cdn.stability.ai
+
+# agent
+# manus
+DOMAIN-SUFFIX,manus.im
+DOMAIN-SUFFIX,manuscdn.com
+
+
+# module.etc
+# Hugging Face
+DOMAIN,huggingface.co
+DOMAIN-SUFFIX,huggingface.co
+DOMAIN,api.huggingface.co
+
+# Anthropic (Claude)
+DOMAIN,anthropic.com
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN,api.anthropic.com
+DOMAIN-SUFFIX,claude.ai
+
+# Other AIGC Services (Cloudflare AI, Clipdrop, Dify, Groq, Jasper, Meta AI, OpenArt, Perplexity, Poe)
+DOMAIN,gateway.ai.cloudflare.com
+DOMAIN,api.github.com
+DOMAIN-SUFFIX,clipdrop.co
+DOMAIN-SUFFIX,dify.ai
+DOMAIN-SUFFIX,groq.com
+DOMAIN-SUFFIX,jasper.ai
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,openart.ai
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,sora.com
+DOMAIN,this_ruleset_is_made_by_sukkaw.ruleset.skk.moe
+
+# Cloud Services and CDN (Commonly used by AI services)
+DOMAIN-SUFFIX,s3.amazonaws.com
+DOMAIN-SUFFIX,cloudfront.net
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,cloudflare.com
+
+# IP and ASN Rules
+IP-CIDR,24.199.123.28/32,no-resolve
+IP-CIDR,64.23.132.171/32,no-resolve
+IP-ASN,14061,no-resolve
+IP-ASN,20473,no-resolve
+
+# Additional Rules from File 1
+
+DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN,cdn.usefathom.com
+DOMAIN-SUFFIX,grazie.ai
+DOMAIN-SUFFIX,grazie.aws.intellij.net
+DOMAIN,imagine.meta.com
+DOMAIN,chat.mistral.ai
+DOMAIN,console.mistral.ai
+DOMAIN-SUFFIX,mistral.ai
+
+
+
+## Domastic Ai overseas
+## deepseek
+DOMAIN-SUFFIX,deepseek.com
+
+## ByteDance
+DOMAIN-SUFFIX,coze.com
+
+# > codedex.io
+DOMAIN-SUFFIX,codedex.io
+
+
+
+
+
+################## EOF ##################
+>>>>>>> origin/main
+#########################################
+# AI 服务访问规则（仅兼容 Surge 语法）
+# 整理时间：2025-04-30
+#########################################
+
+<<<<<<< main
+# === OpenAI (ChatGPT, # === OpenAI (ChatGPT, Sora, Whisper 等) ===
+# 要求：强制美区IP，代理透明度要求高，部分CDN节点封锁代理标识
+DOMAIN, browser-intake-datadoghq.com
+DOMAIN, chat.openai.com
+DOMAIN, chat.openai.com.cdn.cloudflare.net
+DOMAIN, dalle.openai.com
+DOMAIN, sora.openai.com
+DOMAIN, openai-api.arkoselabs.com
+DOMAIN, openaicomproductionae4b.blob.core.windows.net
+DOMAIN, production-openaicom-storage.azureedge.net
+DOMAIN, openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN-SUFFIX, openai.com
+DOMAIN-SUFFIX, oaistatic.com
+DOMAIN-SUFFIX, oaiusercontent.com
+DOMAIN-SUFFIX, chatgpt.com
+DOMAIN-SUFFIX, ai.com
+DOMAIN-SUFFIX, openaiapi-site.azureedge.net
+DOMAIN-SUFFIX, openaicom.imgix.net
+DOMAIN-SUFFIX, chatgpt.livekit.cloud
+DOMAIN-SUFFIX, host.livekit.cloud
+DOMAIN-SUFFIX, turn.livekit.cloud
+DOMAIN-SUFFIX, api.statsig.com
+DOMAIN-SUFFIX, events.statsigapi.net
+DOMAIN-SUFFIX, featuregates.org
+DOMAIN-SUFFIX, auth0.com
+DOMAIN-SUFFIX, algolia.net
+DOMAIN-SUFFIX, identrust.com
+DOMAIN-SUFFIX, intercom.io
+DOMAIN-SUFFIX, intercomcdn.com
+DOMAIN-SUFFIX, launchdarkly.com
+DOMAIN-SUFFIX, segment.io
+DOMAIN-SUFFIX, sentry.io
+DOMAIN-SUFFIX, stripe.com
+DOMAIN-SUFFIX, observeit.net
+DOMAIN-KEYWORD, openai
+DOMAIN-KEYWORD, openaicom-api
+IP-CIDR, 24.199.123.28/32,no-resolve
+IP-CIDR, 64.23.132.171/32,no-resolve
+IP-ASN, 20473,no-resolve
+
+# === Google AI (Gemini, Bard, NotebookLM 等) ===
+# 要求：强制使用 Google 原生IP 或美国代理，部分区域已启用 IP 白名单
+DOMAIN, gemini.google.com
+DOMAIN, ai.google.dev
+DOMAIN, bard.google.com
+DOMAIN, makersuite.google.com
+DOMAIN, alkalimakersuite-pa.clients6.google.com
+DOMAIN-SUFFIX, generativeai.google
+DOMAIN-SUFFIX, generativelanguage.googleapis.com
+DOMAIN-SUFFIX, geller-pa.googleapis.com
+DOMAIN-SUFFIX, notebooklm.google.com
+DOMAIN-SUFFIX, deepmind.com
+DOMAIN-SUFFIX, deepmind.google
+DOMAIN-SUFFIX, aistudio.google.com
+DOMAIN-SUFFIX, apis.google.com
+DOMAIN-SUFFIX, googleapis.com
+DOMAIN-SUFFIX, gstatic.com
+DOMAIN-KEYWORD, colab
+DOMAIN-KEYWORD, developerprofiles
+IP-CIDR, 173.194.0.0/16,no-resolve
+IP-CIDR, 74.125.0.0/16,no-resolve
+
+# === Microsoft AI (Copilot, Bing AI 等) ===
+DOMAIN, copilot.microsoft.com
+DOMAIN, api.msn.com
+DOMAIN, assets.msn.com
+DOMAIN, gateway.bingviz.microsoft.net
+DOMAIN, gateway.bingviz.microsoftapp.net
+DOMAIN, in.appcenter.ms
+DOMAIN, location.microsoft.com
+DOMAIN, odc.officeapps.live.com
+DOMAIN, r.bing.com
+DOMAIN, self.events.data.microsoft.com
+DOMAIN, services.bingapis.com
+DOMAIN, sydney.bing.com
+DOMAIN, www.bing.com
+DOMAIN-SUFFIX, bing.com
+DOMAIN-SUFFIX, bingapis.com
+DOMAIN-SUFFIX, api.microsoftapp.net
+DOMAIN-SUFFIX, bing-shopping.microsoft-falcon.io
+DOMAIN-SUFFIX, edgeservices.bing.com
+
+# === Anthropic (Claude) ===
+# 要求：美区 IP，非支持地区会被拒绝访问
+DOMAIN, api.anthropic.com
+DOMAIN-SUFFIX, anthropic.com
+DOMAIN-SUFFIX, claude.ai
+
+# === Hugging Face (模型平台) ===
+DOMAIN, api.huggingface.co
+DOMAIN-SUFFIX, huggingface.co
+DOMAIN-SUFFIX, huggingface.com
+DOMAIN-SUFFIX, hf.co
+
+# === Perplexity AI ===
+DOMAIN-SUFFIX, perplexity.ai
+DOMAIN-SUFFIX, pplx.ai
+
+# === Poe (Quora) ===
+DOMAIN-SUFFIX, poe.com
+
+# === Midjourney ===
+DOMAIN, midjourney.com
+DOMAIN, api.midjourney.com
+DOMAIN, static.midjourney.com
+DOMAIN, cdn.midjourney.com
+DOMAIN-SUFFIX, midjourney.com
+
+# === Runway ML ===
+DOMAIN, api.runwayml.com
+DOMAIN, static.runwayml.com
+DOMAIN, cdn.runwayml.com
+DOMAIN-SUFFIX, runwayml.com
+DOMAIN-SUFFIX, runwayml.cloud
+
+# === Pika ===
+DOMAIN, api.pika.art
+DOMAIN, static.pika.art
+DOMAIN, pika-art.s3.amazonaws.com
+DOMAIN-SUFFIX, pika.art
+
+# === Mistral AI ===
+DOMAIN, chat.mistral.ai
+DOMAIN, console.mistral.ai
+DOMAIN-SUFFIX, mistral.ai
+
+# === Meta AI (Imagine) ===
+DOMAIN, imagine.meta.com
+DOMAIN-SUFFIX, meta.ai
+
+# === Coze AI ===
+DOMAIN-SUFFIX, coze.com
+
+# === Grok (xAI) ===
+DOMAIN, x.ai
+DOMAIN, grok.x.ai
+DOMAIN, api.x.ai
+DOMAIN, api.x.com
+DOMAIN, x.com
+DOMAIN-SUFFIX, x.ai
+DOMAIN-SUFFIX, grok.com
+
+# === Dify、Clipdrop、Jasper 等 AIGC 工具 ===
+DOMAIN-SUFFIX, clipdrop.co
+DOMAIN-SUFFIX, dify.ai
+DOMAIN-SUFFIX, jasper.ai
+DOMAIN-SUFFIX, openart.ai
+
+# === 音频/图像/视频生成工具 ===
+DOMAIN-SUFFIX, suno.com
+DOMAIN-SUFFIX, leonardo.ai
+DOMAIN-SUFFIX, stability.ai
+DOMAIN, api.stability.ai
+DOMAIN, cdn.stability.ai
+DOMAIN-SUFFIX, moonvalley.com
+DOMAIN-SUFFIX, moonvalley.ai
+
+# === 编程/语义平台 ===
+DOMAIN-SUFFIX, cohere.com
+DOMAIN-SUFFIX, scale.com
+
+# === 校对/NLP 辅助平台 ===
+DOMAIN-SUFFIX, grazie.ai
+DOMAIN-SUFFIX, grazie.aws.intellij.net
+
+# === Agent / 控制服务平台 ===
+DOMAIN-SUFFIX, manus.im
+DOMAIN-SUFFIX, manuscdn.com
+
+# === 其他依赖服务/CDN ===
+DOMAIN, cdn.usefathom.com
+DOMAIN-SUFFIX, s3.amazonaws.com
+DOMAIN-SUFFIX, cloudfront.net
+DOMAIN-SUFFIX, cloudflare.com
+DOMAIN-SUFFIX, challenges.cloudflare.com
+
+# === 保留的公共 IP / ASN 区间（需代理或特殊处理） ===
+IP-ASN, 14061,no-resolve
+>>>>>>>+main
+UFFIX,ai.com
+DOMAIN-SUFFIX,algolia.net
+DOMAIN-SUFFIX,api.statsig.com
+DOMAIN-SUFFIX,auth0.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,chatgpt.livekit.cloud
+DOMAIN-SUFFIX,client-api.arkoselabs.com
+DOMAIN-SUFFIX,events.statsigapi.net
+DOMAIN-SUFFIX,featuregates.org
+DOMAIN-SUFFIX,host.livekit.cloud
+DOMAIN-SUFFIX,identrust.com
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,launchdarkly.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,observeit.net
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+DOMAIN-SUFFIX,openaicom.imgix.net
+DOMAIN-SUFFIX,segment.io
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,stripecdn.com
+DOMAIN-SUFFIX,turn.livekit.cloud
+DOMAIN-KEYWORD,openai
+DOMAIN-KEYWORD,openaicom-api
+DOMAIN,sora.openai.com
+DOMAIN,dalle.openai.com
+
+# Google AI (Bard, Gemini, MakerSuite, NotebookLM)
+DOMAIN,ai.google.dev
+DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN,makersuite.google.com
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,deepmind.google
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+DOMAIN-SUFFIX,apis.google.com
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,geller-pa.googleapis.com
+DOMAIN-SUFFIX,notebooklm.google
+DOMAIN-SUFFIX,notebooklm.google.com
+DOMAIN-SUFFIX,aistudio.google.com
+DOMAIN-KEYWORD,colab
+DOMAIN-KEYWORD,developerprofiles
+DOMAIN-KEYWORD,generativelanguage
+DOMAIN-KEYWORD,alkalimakersuite-pa.clients6.google.com
+DOMAIN,gemini.google.com
+DOMAIN-KEYWORD,aistudio
+
+# Microsoft AI (Copilot, Bing AI)
+DOMAIN,api.msn.com
+DOMAIN,assets.msn.com
+DOMAIN,copilot.microsoft.com
+DOMAIN,gateway.bingviz.microsoft.net
+DOMAIN,gateway.bingviz.microsoftapp.net
+DOMAIN,in.appcenter.ms
+DOMAIN,location.microsoft.com
+DOMAIN,odc.officeapps.live.com
+DOMAIN,r.bing.com
+DOMAIN,self.events.data.microsoft.com
+DOMAIN,services.bingapis.com
+DOMAIN,sydney.bing.com
+DOMAIN,www.bing.com
+DOMAIN-SUFFIX,api.microsoftapp.net
+DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io
+DOMAIN-SUFFIX,edgeservices.bing.com
+
+# Grok AI (xAI)
+DOMAIN,x.ai
+DOMAIN,grok.x.ai
+DOMAIN-SUFFIX,grok.com
+DOMAIN,api.x.ai
+DOMAIN,x.com
+DOMAIN,api.x.com
+DOMAIN-SUFFIX,x.ai
+
+# Midjourney
+DOMAIN,midjourney.com
+DOMAIN-SUFFIX,midjourney.com
+DOMAIN,api.midjourney.com
+DOMAIN,static.midjourney.com
+DOMAIN,cdn.midjourney.com
+
+# Pika
+DOMAIN,pika.art
+DOMAIN-SUFFIX,pika.art
+DOMAIN,api.pika.art
+DOMAIN,static.pika.art
+DOMAIN,pika-art.s3.amazonaws.com
+
+
+# Runway
+DOMAIN,runwayml.com
+DOMAIN-SUFFIX,runwayml.com
+DOMAIN,api.runwayml.com
+DOMAIN,static.runwayml.com
+DOMAIN,cdn.runwayml.com
+
+# Stable Diffusion
+DOMAIN,stability.ai
+DOMAIN-SUFFIX,stability.ai
+DOMAIN,api.stability.ai
+DOMAIN,cdn.stability.ai
+
+# agent
+# manus
+DOMAIN-SUFFIX,manus.im
+DOMAIN-SUFFIX,manuscdn.com
+
+
+# module.etc
+# Hugging Face
+DOMAIN,huggingface.co
+DOMAIN-SUFFIX,huggingface.co
+DOMAIN,api.huggingface.co
+
+# Anthropic (Claude)
+DOMAIN,anthropic.com
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN,api.anthropic.com
+DOMAIN-SUFFIX,claude.ai
+
+# Other AIGC Services (Cloudflare AI, Clipdrop, Dify, Groq, Jasper, Meta AI, OpenArt, Perplexity, Poe)
+DOMAIN,gateway.ai.cloudflare.com
+DOMAIN,api.github.com
+DOMAIN-SUFFIX,clipdrop.co
+DOMAIN-SUFFIX,dify.ai
+DOMAIN-SUFFIX,groq.com
+DOMAIN-SUFFIX,jasper.ai
+DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,openart.ai
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,sora.com
+DOMAIN,this_ruleset_is_made_by_sukkaw.ruleset.skk.moe
+
+# Cloud Services and CDN (Commonly used by AI services)
+DOMAIN-SUFFIX,s3.amazonaws.com
+DOMAIN-SUFFIX,cloudfront.net
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,cloudflare.com
+
+# IP and ASN Rules
+IP-CIDR,24.199.123.28/32,no-resolve
+IP-CIDR,64.23.132.171/32,no-resolve
+IP-ASN,14061,no-resolve
+IP-ASN,20473,no-resolve
+
+# Additional Rules from File 1
+
+DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN,cdn.usefathom.com
+DOMAIN-SUFFIX,grazie.ai
+DOMAIN-SUFFIX,grazie.aws.intellij.net
+DOMAIN,imagine.meta.com
+DOMAIN,chat.mistral.ai
+DOMAIN,console.mistral.ai
+DOMAIN-SUFFIX,mistral.ai
+
+
+
+## Domastic Ai overseas
+## deepseek
+DOMAIN-SUFFIX,deepseek.com
+
+## ByteDance
+DOMAIN-SUFFIX,coze.com
+
+# > codedex.io
+DOMAIN-SUFFIX,codedex.io
+
+
+
+
+
+################## EOF ##################
+>>>>>>> origin/main
