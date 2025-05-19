@@ -5,3 +5,6 @@ DOMAIN,music.811861.xyz // Added for: music.811861.xyz:443
 DOMAIN-SUFFIX,ffa.chat
 DOMAIN-SUFFIX,deepseek.com
 
+# software client
+DOMAIN-SUFFIX,skyjos.com
+
