@@ -1,18 +1,18 @@
-## xhs
-DOMAIN-SUFFIX,xhscdn.com
-DOMAIN-SUFFIX,xiaohongshu.com
-DOMAIN-SUFFIX,fp-it.fengkongcloud.com
-DOMAIN-SUFFIX,xhscdn.com
-DOMAIN-SUFFIX,xhscdn.net 
-DOMAIN-SUFFIX,mob.com
-## xhs_ip
-IP-CIDR,163.181.39.231/32
-IP-CIDR,117.185.25.254/32
-IP-CIDR,119.29.29.98/32
-IP-CIDR,106.15.236.125/32 
-IP-CIDR,175.27.147.188/32
-IP-CIDR,212.129.159.173/32
-IP-CIDR,81.69.116.102/32
+# xhs相关域名（主站、内容分发、第三方接口等）
+DOMAIN-SUFFIX,xiaohongshu.com       # 小红书主域
+DOMAIN-SUFFIX,xhscdn.com            # 小红书内容分发CDN
+DOMAIN-SUFFIX,xhscdn.net            # 小红书内容分发CDN
+DOMAIN-SUFFIX,fp-it.fengkongcloud.com # 风控云（内容安全）
+DOMAIN-SUFFIX,mob.com               # Mob服务（第三方统计/推送）
+
+# xhs相关IP节点（API、内容分发、IM、测速等）
 IP-CIDR,81.69.116.86/32
 IP-CIDR,81.69.116.87/32
+IP-CIDR,81.69.116.102/32
 IP-CIDR,101.227.133.99/32
+IP-CIDR,106.15.236.125/32
+IP-CIDR,117.185.25.254/32
+IP-CIDR,119.29.29.98/32
+IP-CIDR,163.181.39.231/32
+IP-CIDR,175.27.147.188/32
+IP-CIDR,212.129.159.173/32
