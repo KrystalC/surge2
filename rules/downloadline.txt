@@ -1,1 +1,16 @@
+#########################################
+# AI/CDN/内容分发大流量规则（Surge 域名规则）
+# 整理时间：2025-05-19
+# 用法：指向 Download/CDN 组，节省优质代理带宽
+#########################################
+
+# Hugging Face大文件与模型权重CDN
+DOMAIN-SUFFIX,hf.co            # 包含所有 huggingface CDN节点
+
+# MissAV 视频内容平台
+DOMAIN-SUFFIX,missav.ai
+
+# 其它内容分发/下载与外部配置接口
+DOMAIN-SUFFIX,cmastd.com       # 内容分发服务（如图片等）
+DOMAIN-SUFFIX,liquidlink.cn    # APP外部配置/内容下载
 
