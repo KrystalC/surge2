@@ -1,7 +1,12 @@
 # bbs
-DOMAIN-SUFFIX,hdhive.online# pt
-DOMAIN-SUFFIX,ubits.club
+DOMAIN-SUFFIX,hdhive.online
 
+# pt
+DOMAIN-SUFFIX,ubits.club
 
 # BBS
 DOMAIN-SUFFIX,invites.fun
+
+# other stream
+DOMAIN-SUFFIX,welife6.com
+DOMAIN-SUFFIX,jable.tv
