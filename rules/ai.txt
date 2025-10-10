@@ -50,11 +50,17 @@ DOMAIN-SUFFIX,perplexity.ai
 DOMAIN-SUFFIX,poe.com
 DOMAIN-SUFFIX,pplx.ai
 
+# xAI / Grok
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,grok.com
+
 # Deepseek、Sogni 等新兴AI平台
 DOMAIN-SUFFIX,deepseek.com
 DOMAIN-SUFFIX,sogni.ai
 DOMAIN-SUFFIX,prompt.sogni.ai
 DOMAIN-SUFFIX,diabrowser.engineering
+DOMAIN-SUFFIX,diabrowser.com
+DOMAIN-SUFFIX,minimaxi.com
 DOMAIN-SUFFIX,cursor.com
 
 # 图像、视频、AIGC平台
@@ -99,15 +105,34 @@ DOMAIN-SUFFIX,segment.io
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,cloudfront.net
 DOMAIN-SUFFIX,cloudflare.com
-DOMAIN-SUFFIX,s3.amazonaws.com
 DOMAIN-SUFFIX,challenges.cloudflare.com
 DOMAIN-SUFFIX,googletagmanager.com
 DOMAIN,cdn.usefathom.com
+# 新增（来自 ,Ai 条目）
+DOMAIN-SUFFIX,intercom.com
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,chronosphere.io
 
 # 公共学术与工具相关
-DOMAIN-SUFFIX,edu.cn
 DOMAIN-SUFFIX,ntp.org
 DOMAIN-SUFFIX,sheerid.com
+
+# Apple 服务（Private Relay / Siri / iCloud 等）
+DOMAIN-SUFFIX,apple-relay.apple.com
+DOMAIN-SUFFIX,apple-relay.fastly-edge.com
+DOMAIN-SUFFIX,apple-relay.cloudflare.com
+DOMAIN-SUFFIX,gateway.icloud.com
+DOMAIN-SUFFIX,guzzoni.apple.com
+DOMAIN-SUFFIX,cp4.cloudflare.com
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
+DOMAIN-SUFFIX,apps.mzstatic.com
+# 新增（来自 ,Ai 条目）
+DOMAIN-SUFFIX,proxy.safebrowsing.apple
+
+# 其他第三方依赖（抓包出现，可能为个别产品所需）
+DOMAIN-SUFFIX,beyondwickedmapping.org
+DOMAIN-SUFFIX,featureassets.org
+DOMAIN-SUFFIX,prodregistryv2.org
 
 # 典型IP、ASN代理策略（仅必要时使用）
 IP-CIDR,24.199.123.28/32,no-resolve     # OpenAI
