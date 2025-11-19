@@ -1,11 +1,12 @@
 # ===================================================
-# AI Services Rule Set (Standard Surge Format)
-# Description: Rules for AI services (OpenAI, Claude, Gemini, etc.)
-# Usage: RULE-SET, path/to/this/file.list, PolicyName
-# Note: Generic Google/Cloudflare domains are excluded to protect YT/Speed.
+# AI Services Master List (Integrated)
+# Coverage: OpenAI, Claude, Gemini, Copilot, Midjourney, etc.
+# Plus: Google Auth, Accounts, AI Uploads & User Activity
+# Excludes: YouTube Video, Google Drive Main Sync
 # ===================================================
 
-# --- 01. Verification & Security ---
+# --- 01. Security, Verification & Auth (Crucial) ---
+# Cloudflare Turnstile & Auth Providers
 DOMAIN,challenges.cloudflare.com
 DOMAIN-SUFFIX,openai-api.arkoselabs.com
 DOMAIN-SUFFIX,arkoselabs.com
@@ -16,12 +17,48 @@ DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,statsig.com
 DOMAIN-SUFFIX,featuregates.org
 DOMAIN-SUFFIX,intercom.io
-DOMAIN-SUFFIX,intercom.com
 DOMAIN-SUFFIX,launchdarkly.com
-DOMAIN-SUFFIX,algolia.net
-DOMAIN-SUFFIX,segment.io
+DOMAIN-SUFFIX,recaptcha.net
 
-# --- 02. OpenAI (ChatGPT / Sora) ---
+# --- 02. Google AI & Accounts (Deep Integration) ---
+# > AI Platforms
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,aistudio.google.com
+DOMAIN-SUFFIX,makersuite.google.com
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,deepmind.google
+DOMAIN-SUFFIX,notebooklm.google.com
+DOMAIN-SUFFIX,generativeai.google
+# > AI APIs & Backend (Includes alkalimakersuite-pa & geller-pa)
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+DOMAIN-SUFFIX,geller-pa.googleapis.com
+# > User Activity & Web Clients (Includes alkalimakersuite-pa, waa-pa)
+DOMAIN-SUFFIX,clients6.google.com
+DOMAIN-SUFFIX,client-channel.google.com
+DOMAIN-SUFFIX,apis.google.com
+# > File Uploads for Multimodal AI (Images/PDFs)
+DOMAIN-SUFFIX,content-storage-upload.googleapis.com
+DOMAIN-SUFFIX,alkalimakersuite-pa.clients6.google.com
+# > Account Auth & Identity (Seamless Login)
+DOMAIN-SUFFIX,accounts.google.com
+DOMAIN-SUFFIX,accounts.youtube.com
+DOMAIN-SUFFIX,myaccount.google.com
+DOMAIN-SUFFIX,ogs.google.com
+DOMAIN-SUFFIX,oauth2.googleapis.com
+DOMAIN-SUFFIX,id.google.com
+DOMAIN-SUFFIX,profile.google.com
+# > Essential Assets (UI/Icons - Safe for YT)
+DOMAIN-SUFFIX,gstatic.com
+DOMAIN-SUFFIX,ssl.gstatic.com
+# > AI Helpers (Translate/Lens)
+DOMAIN-SUFFIX,translate.google.com
+DOMAIN-SUFFIX,translate.googleapis.com
+DOMAIN-SUFFIX,lens.google.com
+DOMAIN-SUFFIX,assistant.google.com
+
+# --- 03. OpenAI (ChatGPT) ---
 DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,oaistatic.com
@@ -34,44 +71,24 @@ DOMAIN-SUFFIX,host.livekit.cloud
 DOMAIN-SUFFIX,turn.livekit.cloud
 DOMAIN-KEYWORD,openai
 DOMAIN-KEYWORD,chatgpt
-# OpenAI IPs & ASN
 IP-ASN,20473,no-resolve
 IP-CIDR,24.199.123.28/32,no-resolve
 IP-CIDR,64.23.132.171/32,no-resolve
 IP-CIDR,23.102.140.112/32,no-resolve
 IP-CIDR,23.98.142.176/28,no-resolve
-IP-CIDR,40.84.180.224/28,no-resolve
 IP-CIDR,135.234.64.0/24,no-resolve
 
-# --- 03. Anthropic (Claude) ---
+# --- 04. Anthropic (Claude) ---
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,anthropicusercontent.com
 DOMAIN-KEYWORD,claude
 DOMAIN-KEYWORD,anthropic
-# Claude IPs & ASN
 IP-ASN,399358,no-resolve
 IP-CIDR,160.79.104.0/21,no-resolve
 IP-CIDR,65.154.224.0/24,no-resolve
 
-# --- 04. Google AI (Gemini / Deepmind Only) ---
-# STRICT MODE: Excludes generic Google domains
-DOMAIN-SUFFIX,gemini.google.com
-DOMAIN-SUFFIX,bard.google.com
-DOMAIN-SUFFIX,aistudio.google.com
-DOMAIN-SUFFIX,makersuite.google.com
-DOMAIN-SUFFIX,deepmind.com
-DOMAIN-SUFFIX,deepmind.google
-DOMAIN-SUFFIX,deepmind.google.com
-DOMAIN-SUFFIX,notebooklm.google.com
-DOMAIN-SUFFIX,generativeai.google
-DOMAIN-SUFFIX,generativelanguage.googleapis.com
-DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
-DOMAIN-SUFFIX,geller-pa.googleapis.com
-DOMAIN-KEYWORD,colab
-DOMAIN-KEYWORD,gemini
-
-# --- 05. Microsoft (Copilot / Bing) ---
+# --- 05. Microsoft & GitHub Copilot ---
 DOMAIN-SUFFIX,copilot.microsoft.com
 DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,bingapis.com
@@ -79,78 +96,43 @@ DOMAIN-SUFFIX,edgeservices.bing.com
 DOMAIN-SUFFIX,sydney.bing.com
 DOMAIN-SUFFIX,designer.microsoft.com
 DOMAIN-SUFFIX,chat.msn.com
-DOMAIN-SUFFIX,api.microsoftapp.net
-DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io
-
-# --- 06. GitHub Copilot ---
 DOMAIN-SUFFIX,githubcopilot.com
 DOMAIN-SUFFIX,cocopilot.org
 DOMAIN-SUFFIX,copilot-proxy.githubusercontent.com
 DOMAIN-SUFFIX,copilot.githubusercontent.com
 
-# --- 07. xAI (Grok) ---
+# --- 06. xAI, Perplexity, DeepSeek & Others ---
 DOMAIN-SUFFIX,grok.x.ai
 DOMAIN-SUFFIX,x.ai
-DOMAIN-SUFFIX,grok.com
-
-# --- 08. Perplexity, Poe & Quora ---
 DOMAIN-SUFFIX,perplexity.ai
 DOMAIN-SUFFIX,pplx.ai
 DOMAIN-SUFFIX,poe.com
 DOMAIN-SUFFIX,poecdn.net
 DOMAIN-SUFFIX,quora.com
-
-# --- 09. Emerging AI (DeepSeek, etc.) ---
 DOMAIN-SUFFIX,deepseek.com
 DOMAIN-SUFFIX,chat.deepseek.com
-DOMAIN-SUFFIX,sogni.ai
-DOMAIN-SUFFIX,prompt.sogni.ai
-DOMAIN-SUFFIX,diabrowser.engineering
-DOMAIN-SUFFIX,diabrowser.com
-DOMAIN-SUFFIX,minimaxi.com
 DOMAIN-SUFFIX,cursor.com
 DOMAIN-SUFFIX,cursor.sh
-DOMAIN-SUFFIX,dify.ai
-DOMAIN-SUFFIX,coze.com
 DOMAIN-SUFFIX,notion.ai
+DOMAIN-SUFFIX,huggingface.co
+DOMAIN-SUFFIX,hf.co
+DOMAIN-SUFFIX,suno.ai
+DOMAIN-SUFFIX,udio.com
+DOMAIN-SUFFIX,elevenlabs.io
 
-# --- 10. Generative Art (Midjourney, Stable Diffusion) ---
+# --- 07. Generative Art ---
 DOMAIN-SUFFIX,midjourney.com
 DOMAIN-SUFFIX,midjourney.io
 DOMAIN-SUFFIX,discord.com
 DOMAIN-SUFFIX,discordapp.com
 DOMAIN-SUFFIX,stability.ai
-DOMAIN-SUFFIX,stable-diffusion-art.com
 DOMAIN-SUFFIX,runwayml.com
-DOMAIN-SUFFIX,runwayml.cloud
-DOMAIN-SUFFIX,leonardo.ai
-DOMAIN-SUFFIX,openart.ai
-DOMAIN-SUFFIX,pika.art
-DOMAIN-SUFFIX,clipdrop.co
 DOMAIN-SUFFIX,civitai.com
+DOMAIN-SUFFIX,clipdrop.co
 
-# --- 11. Audio & Dev (Suno, HuggingFace) ---
-DOMAIN-SUFFIX,suno.ai
-DOMAIN-SUFFIX,suno.com
-DOMAIN-SUFFIX,elevenlabs.io
-DOMAIN-SUFFIX,huggingface.co
-DOMAIN-SUFFIX,huggingface.com
-DOMAIN-SUFFIX,hf.co
-DOMAIN-SUFFIX,cohere.com
-DOMAIN-SUFFIX,supabase.co
-DOMAIN-SUFFIX,manus.im
-DOMAIN-SUFFIX,manuscdn.com
-DOMAIN-SUFFIX,grazie.ai
-DOMAIN-SUFFIX,grazie.aws.intellij.net
-DOMAIN-SUFFIX,jasper.ai
-DOMAIN-SUFFIX,scale.com
-
-# --- 12. Apple Intelligence (Private Relay / Siri) ---
+# --- 08. Apple Intelligence ---
 DOMAIN-SUFFIX,apple-relay.apple.com
 DOMAIN-SUFFIX,apple-relay.fastly-edge.com
 DOMAIN-SUFFIX,apple-relay.cloudflare.com
-DOMAIN-SUFFIX,gateway.icloud.com
 DOMAIN-SUFFIX,guzzoni.apple.com
 DOMAIN-SUFFIX,guzzoni.smoot.apple.com
-DOMAIN-SUFFIX,mask-api.icloud.com
-DOMAIN-SUFFIX,proxy.safebrowsing.apple
