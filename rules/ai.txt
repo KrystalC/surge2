@@ -29,6 +29,7 @@ DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
 DOMAIN-SUFFIX,aistudio.google.com
 DOMAIN-KEYWORD,colab
+DOMAIN-KEYWORD,gemini
 DOMAIN-KEYWORD,developerprofiles
 
 # Anthropic Claude
