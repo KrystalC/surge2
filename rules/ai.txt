@@ -104,6 +104,7 @@ DOMAIN-SUFFIX,copilot.githubusercontent.com
 # --- 06. xAI, Perplexity, DeepSeek & Others ---
 DOMAIN-SUFFIX,grok.x.ai
 DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,grok.com
 DOMAIN-SUFFIX,perplexity.ai
 DOMAIN-SUFFIX,pplx.ai
 DOMAIN-SUFFIX,poe.com
