@@ -137,3 +137,8 @@ DOMAIN-SUFFIX,apple-relay.fastly-edge.com
 DOMAIN-SUFFIX,apple-relay.cloudflare.com
 DOMAIN-SUFFIX,guzzoni.apple.com
 DOMAIN-SUFFIX,guzzoni.smoot.apple.com
+
+# --- 09. Additional AI Services & Supporting Sites ---
+DOMAIN-SUFFIX,link.com
+DOMAIN,www.numberbarn.com
+DOMAIN-SUFFIX,typesafe.ai
