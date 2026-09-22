@@ -1,14 +1,16 @@
 # ===================================================
-# AI Services Master List (Integrated)
-# Coverage: OpenAI, Claude, Gemini, Copilot, Midjourney, etc.
-# Plus: Google Auth, Accounts, AI Uploads & User Activity
-# Excludes: YouTube Video, Google Drive Main Sync
+# AI Services & Selected Supporting Sites
+# Scope: AI websites, login, APIs and selected supporting resources.
+# Dedicated video-download hosts are not intentionally included.
+# Shared hosts can carry mixed content; domain rules cannot filter URL paths.
+# Routing policy and priority are set by the importing Surge profile.
+# Reviewed: 2026-09-22
 # ===================================================
 
-# --- 01. Security, Verification & Auth (Crucial) ---
-# Cloudflare Turnstile & Auth Providers
+# --- 01. Shared Security, Verification & Auth ---
+# Shared services also serve non-AI websites; keep new additions host-specific.
+# Source: https://help.openai.com/en/articles/9247338
 DOMAIN,challenges.cloudflare.com
-DOMAIN-SUFFIX,openai-api.arkoselabs.com
 DOMAIN-SUFFIX,arkoselabs.com
 DOMAIN-SUFFIX,auth0.com
 DOMAIN-SUFFIX,identrust.com
@@ -17,10 +19,12 @@ DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,statsig.com
 DOMAIN-SUFFIX,featuregates.org
 DOMAIN-SUFFIX,intercom.io
+DOMAIN,js.intercomcdn.com
+DOMAIN,cdn.workos.com
 DOMAIN-SUFFIX,launchdarkly.com
 DOMAIN-SUFFIX,recaptcha.net
 
-# --- 02. Google AI & Accounts (Deep Integration) ---
+# --- 02. Google AI & Accounts ---
 # > AI Platforms
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,bard.google.com
@@ -30,17 +34,16 @@ DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
 DOMAIN-SUFFIX,notebooklm.google.com
 DOMAIN-SUFFIX,generativeai.google
-# > AI APIs & Backend (Includes alkalimakersuite-pa & geller-pa)
+# > AI APIs & Backend
 DOMAIN-SUFFIX,generativelanguage.googleapis.com
 DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
 DOMAIN-SUFFIX,geller-pa.googleapis.com
-# > User Activity & Web Clients (Includes alkalimakersuite-pa, waa-pa)
+# > Shared Google web clients
 DOMAIN-SUFFIX,clients6.google.com
 DOMAIN-SUFFIX,client-channel.google.com
 DOMAIN-SUFFIX,apis.google.com
 # > File Uploads for Multimodal AI (Images/PDFs)
 DOMAIN-SUFFIX,content-storage-upload.googleapis.com
-DOMAIN-SUFFIX,alkalimakersuite-pa.clients6.google.com
 # > Account Auth & Identity (Seamless Login)
 DOMAIN-SUFFIX,accounts.google.com
 DOMAIN-SUFFIX,accounts.youtube.com
@@ -49,9 +52,8 @@ DOMAIN-SUFFIX,ogs.google.com
 DOMAIN-SUFFIX,oauth2.googleapis.com
 DOMAIN-SUFFIX,id.google.com
 DOMAIN-SUFFIX,profile.google.com
-# > Essential Assets (UI/Icons - Safe for YT)
+# > Shared Google static assets (not exclusive to AI)
 DOMAIN-SUFFIX,gstatic.com
-DOMAIN-SUFFIX,ssl.gstatic.com
 # > AI Helpers (Translate/Lens)
 DOMAIN-SUFFIX,translate.google.com
 DOMAIN-SUFFIX,translate.googleapis.com
@@ -69,41 +71,49 @@ DOMAIN-SUFFIX,openaicom.imgix.net
 DOMAIN-SUFFIX,chatgpt.livekit.cloud
 DOMAIN-SUFFIX,host.livekit.cloud
 DOMAIN-SUFFIX,turn.livekit.cloud
+# Compatibility keyword rules retained pending separate narrowing.
 DOMAIN-KEYWORD,openai
 DOMAIN-KEYWORD,chatgpt
-IP-ASN,20473,no-resolve
-IP-CIDR,24.199.123.28/32,no-resolve
-IP-CIDR,64.23.132.171/32,no-resolve
-IP-CIDR,23.102.140.112/32,no-resolve
-IP-CIDR,23.98.142.176/28,no-resolve
-IP-CIDR,135.234.64.0/24,no-resolve
 
 # --- 04. Anthropic (Claude) ---
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,anthropicusercontent.com
+# Explicit login and browser-bridge hosts; broad user-content hosts not added.
+# Source: https://code.claude.com/docs/en/network-config
+DOMAIN,claude.com
+DOMAIN,platform.claude.com
+DOMAIN,bridge.claudeusercontent.com
 DOMAIN-KEYWORD,claude
 DOMAIN-KEYWORD,anthropic
-IP-ASN,399358,no-resolve
-IP-CIDR,160.79.104.0/21,no-resolve
-IP-CIDR,65.154.224.0/24,no-resolve
 
 # --- 05. Microsoft & GitHub Copilot ---
 DOMAIN-SUFFIX,copilot.microsoft.com
 DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,bingapis.com
-DOMAIN-SUFFIX,edgeservices.bing.com
-DOMAIN-SUFFIX,sydney.bing.com
 DOMAIN-SUFFIX,designer.microsoft.com
 DOMAIN-SUFFIX,chat.msn.com
 DOMAIN-SUFFIX,githubcopilot.com
 DOMAIN-SUFFIX,cocopilot.org
 DOMAIN-SUFFIX,copilot-proxy.githubusercontent.com
 DOMAIN-SUFFIX,copilot.githubusercontent.com
+# Code-reference checks and client configuration; not video delivery.
+# Source: https://docs.github.com/en/copilot/reference/copilot-allowlist-reference
+DOMAIN,origin-tracker.githubusercontent.com
+DOMAIN,default.exp-tas.com
 
 # --- 06. xAI, Perplexity, DeepSeek & Others ---
-DOMAIN-SUFFIX,grok.x.ai
-DOMAIN-SUFFIX,x.ai
+# Explicit xAI hosts avoid the broad x.ai media-download coverage.
+# vidgen.x.ai and files-cdn.x.ai are intentionally absent from domain rules.
+# Source: https://docs.x.ai/developers/model-capabilities/imagine/files
+DOMAIN,x.ai
+DOMAIN,www.x.ai
+DOMAIN,grok.x.ai
+DOMAIN-SUFFIX,api.x.ai
+DOMAIN,console.x.ai
+DOMAIN,accounts.x.ai
+DOMAIN,docs.x.ai
+DOMAIN,imgen.x.ai
 DOMAIN-SUFFIX,grok.com
 DOMAIN-SUFFIX,grokipedia.com
 DOMAIN-SUFFIX,perplexity.ai
@@ -112,9 +122,12 @@ DOMAIN-SUFFIX,poe.com
 DOMAIN-SUFFIX,poecdn.net
 DOMAIN-SUFFIX,quora.com
 DOMAIN-SUFFIX,deepseek.com
-DOMAIN-SUFFIX,chat.deepseek.com
 DOMAIN-SUFFIX,cursor.com
 DOMAIN-SUFFIX,cursor.sh
+# Extension marketplace and software assets; not video delivery.
+# Source: https://cursor.com/docs/enterprise/network-configuration
+DOMAIN,marketplace.cursorapi.com
+DOMAIN,cursor-cdn.com
 DOMAIN-SUFFIX,notion.ai
 DOMAIN-SUFFIX,huggingface.co
 DOMAIN-SUFFIX,hf.co
@@ -143,3 +156,16 @@ DOMAIN-SUFFIX,guzzoni.smoot.apple.com
 DOMAIN-SUFFIX,link.com
 DOMAIN,www.numberbarn.com
 DOMAIN-SUFFIX,typesafe.ai
+
+# --- 10. Legacy IP Compatibility ---
+# Exact IP ranges retained; this is not the current complete ChatGPT Voice list.
+# no-resolve avoids triggering DNS lookups; it does not narrow IP/ASN scope.
+# The cloud-provider-wide AS20473 (Vultr) rule has been removed.
+IP-CIDR,24.199.123.28/32,no-resolve
+IP-CIDR,64.23.132.171/32,no-resolve
+IP-CIDR,23.102.140.112/32,no-resolve
+IP-CIDR,23.98.142.176/28,no-resolve
+IP-CIDR,135.234.64.0/24,no-resolve
+IP-ASN,399358,no-resolve
+IP-CIDR,160.79.104.0/21,no-resolve
+IP-CIDR,65.154.224.0/24,no-resolve
