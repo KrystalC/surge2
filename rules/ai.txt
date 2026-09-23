@@ -145,19 +145,31 @@ DOMAIN-SUFFIX,runwayml.com
 DOMAIN-SUFFIX,civitai.com
 DOMAIN-SUFFIX,clipdrop.co
 
-# --- 08. Apple Intelligence ---
+# --- 08. Meta AI & Muse ---
+# Muse product and model endpoints confirmed by Meta; keep shared Meta services host-specific.
+# Sources: https://ai.meta.com/muse/
+#          https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/
+#          https://dev.meta.ai/resources/blog/build-with-muse-spark
+DOMAIN-SUFFIX,muse.ai
+DOMAIN,meta.ai
+DOMAIN,api.meta.ai
+DOMAIN,dev.meta.ai
+DOMAIN,ai.meta.com
+DOMAIN,developer.meta.com
+
+# --- 09. Apple Intelligence ---
 DOMAIN-SUFFIX,apple-relay.apple.com
 DOMAIN-SUFFIX,apple-relay.fastly-edge.com
 DOMAIN-SUFFIX,apple-relay.cloudflare.com
 DOMAIN-SUFFIX,guzzoni.apple.com
 DOMAIN-SUFFIX,guzzoni.smoot.apple.com
 
-# --- 09. Additional AI Services & Supporting Sites ---
+# --- 10. Additional AI Services & Supporting Sites ---
 DOMAIN-SUFFIX,link.com
 DOMAIN,www.numberbarn.com
 DOMAIN-SUFFIX,typesafe.ai
 
-# --- 10. Legacy IP Compatibility ---
+# --- 11. Legacy IP Compatibility ---
 # Exact IP ranges retained; this is not the current complete ChatGPT Voice list.
 # no-resolve avoids triggering DNS lookups; it does not narrow IP/ASN scope.
 # The cloud-provider-wide AS20473 (Vultr) rule has been removed.
