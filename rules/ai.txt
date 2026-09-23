@@ -156,6 +156,26 @@ DOMAIN,api.meta.ai
 DOMAIN,dev.meta.ai
 DOMAIN,ai.meta.com
 DOMAIN,developer.meta.com
+# > Muse usage
+# Muse product terms are served from agent.meta.ai.
+# Source: https://www.meta.com/help/subscriptions/1021145227643680/
+DOMAIN,agent.meta.ai
+# > Meta account and Accounts Center
+# Source: https://www.meta.com/help/artificial-intelligence/639558911929531/
+#         https://www.meta.com/help/accounts-center/
+DOMAIN,auth.meta.com
+DOMAIN,accountscenter.meta.com
+DOMAIN,accountscenter.facebook.com
+DOMAIN,accountscenter.instagram.com
+# > Facebook/Instagram sign-in can leave the account-center hosts.
+# These shared hosts also route ordinary social traffic when this list is enabled.
+DOMAIN,facebook.com
+DOMAIN,www.facebook.com
+DOMAIN,m.facebook.com
+DOMAIN,instagram.com
+DOMAIN,www.instagram.com
+# Shared login assets can also be used outside AI products.
+DOMAIN,static.xx.fbcdn.net
 
 # --- 09. Apple Intelligence ---
 DOMAIN-SUFFIX,apple-relay.apple.com
