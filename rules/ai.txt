@@ -146,36 +146,40 @@ DOMAIN-SUFFIX,civitai.com
 DOMAIN-SUFFIX,clipdrop.co
 
 # --- 08. Meta AI & Muse ---
-# Muse product and model endpoints confirmed by Meta; keep shared Meta services host-specific.
+# > Product websites and app links
 # Sources: https://ai.meta.com/muse/
-#          https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/
-#          https://dev.meta.ai/resources/blog/build-with-muse-spark
+#          https://www.meta.com/help/subscriptions/1021145227643680/
 DOMAIN-SUFFIX,muse.ai
 DOMAIN,meta.ai
+DOMAIN,ai.meta.com
+# Muse supplemental terms host; this alone does not establish an app API endpoint.
+DOMAIN,agent.meta.ai
+# > Model API and developer portal
+# Source: https://dev.meta.ai/resources/blog/build-with-muse-spark
 DOMAIN,api.meta.ai
 DOMAIN,dev.meta.ai
-DOMAIN,ai.meta.com
 DOMAIN,developer.meta.com
-# > Muse usage
-# Muse product terms are served from agent.meta.ai.
-# Source: https://www.meta.com/help/subscriptions/1021145227643680/
-DOMAIN,agent.meta.ai
 # > Meta account and Accounts Center
-# Source: https://www.meta.com/help/artificial-intelligence/639558911929531/
-#         https://www.meta.com/help/accounts-center/
+# Meta login and account management; these hosts are shared across Meta products.
+# Sources: https://www.meta.com/help/artificial-intelligence/639558911929531/
+#          https://www.meta.com/help/accounts-center/
 DOMAIN,auth.meta.com
 DOMAIN,accountscenter.meta.com
 DOMAIN,accountscenter.facebook.com
 DOMAIN,accountscenter.instagram.com
-# > Facebook/Instagram sign-in can leave the account-center hosts.
-# These shared hosts also route ordinary social traffic when this list is enabled.
+# > Facebook and Instagram sign-in
+# Muse supports creating a Meta account with either identity.
+# These hosts serve whole social sites; domain rules cannot isolate login URL paths.
+# Source: https://www.meta.com/help/subscriptions/1021145227643680/
 DOMAIN,facebook.com
 DOMAIN,www.facebook.com
 DOMAIN,m.facebook.com
 DOMAIN,instagram.com
 DOMAIN,www.instagram.com
-# Shared login assets can also be used outside AI products.
+# > Shared static assets
+# Used across Meta services, including account/help pages; not Muse-exclusive.
 DOMAIN,static.xx.fbcdn.net
+# No Muse-specific stable IP ranges confirmed; add IP rules only with attribution evidence.
 
 # --- 09. Apple Intelligence ---
 DOMAIN-SUFFIX,apple-relay.apple.com
