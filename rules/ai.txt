@@ -4,7 +4,7 @@
 # Dedicated video-download hosts are not intentionally included.
 # Shared hosts can carry mixed content; domain rules cannot filter URL paths.
 # Routing policy and priority are set by the importing Surge profile.
-# Reviewed: 2026-09-22
+# Reviewed: 2026-09-24
 # ===================================================
 
 # --- 01. Shared Security, Verification & Auth ---
@@ -150,6 +150,9 @@ DOMAIN-SUFFIX,clipdrop.co
 # Sources: https://ai.meta.com/muse/
 #          https://www.meta.com/help/subscriptions/1021145227643680/
 DOMAIN-SUFFIX,muse.ai
+# > Muse Secure VM transport observed in Surge capture (2026-09-24)
+# WebSocket /v1/noise from muse.ai; observed host, not a published IP allowlist.
+DOMAIN,hatch.metaaivm.com
 DOMAIN,meta.ai
 DOMAIN,ai.meta.com
 # Muse supplemental terms host; this alone does not establish an app API endpoint.
