@@ -70,6 +70,12 @@ DOMAIN,aida.googleapis.com
 DOMAIN,aicode.googleapis.com
 DOMAIN,cloudcode-pa.googleapis.com
 DOMAIN,daily-cloudcode-pa.googleapis.com
+# > Image and video generation (Google Flow and Labs)
+# Google Flow video creation workspace.
+# https://flow.google.com/
+DOMAIN,flow.google.com
+# Google Labs visual generation backend.
+DOMAIN,aisandbox-pa.googleapis.com
 # > Shared Google web clients
 DOMAIN-SUFFIX,clients6.google.com
 DOMAIN-SUFFIX,client-channel.google.com
@@ -129,7 +135,6 @@ DOMAIN-KEYWORD,anthropic
 DOMAIN-SUFFIX,copilot.microsoft.com
 DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,bingapis.com
-DOMAIN-SUFFIX,designer.microsoft.com
 DOMAIN-SUFFIX,chat.msn.com
 DOMAIN-SUFFIX,githubcopilot.com
 DOMAIN-SUFFIX,cocopilot.org
@@ -139,9 +144,11 @@ DOMAIN-SUFFIX,copilot.githubusercontent.com
 # Source: https://docs.github.com/en/copilot/reference/copilot-allowlist-reference
 DOMAIN,origin-tracker.githubusercontent.com
 DOMAIN,default.exp-tas.com
+# > Microsoft Designer image creation
+DOMAIN-SUFFIX,designer.microsoft.com
 
 # --- 06. xAI, Perplexity, DeepSeek & Others ---
-# xAI product, account, and API hosts.
+# > xAI products, accounts, and APIs
 DOMAIN,x.ai
 DOMAIN,www.x.ai
 DOMAIN,grok.x.ai
@@ -149,14 +156,16 @@ DOMAIN-SUFFIX,api.x.ai
 DOMAIN,console.x.ai
 DOMAIN,accounts.x.ai
 DOMAIN,docs.x.ai
-# Grok generated image and video results and Files API public links.
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,grokipedia.com
+# > Grok image and video results and Files API public links
 # The Files CDN also serves public links to uploaded files.
 # Source: https://docs.x.ai/developers/model-capabilities/imagine/files/outputs
 DOMAIN,imgen.x.ai
 DOMAIN,vidgen.x.ai
 DOMAIN,files-cdn.x.ai
-DOMAIN-SUFFIX,grok.com
-DOMAIN-SUFFIX,grokipedia.com
+
+# > Other AI services
 DOMAIN-SUFFIX,perplexity.ai
 DOMAIN-SUFFIX,pplx.ai
 DOMAIN-SUFFIX,poe.com
@@ -176,20 +185,13 @@ DOMAIN-SUFFIX,suno.ai
 DOMAIN-SUFFIX,udio.com
 DOMAIN-SUFFIX,elevenlabs.io
 
-# --- 07. AI Image & Video ---
+# --- 07. Dedicated Image & Video Platforms ---
 # > Platforms and generation APIs
-# Google Flow video creation workspace.
-# https://flow.google.com/
-DOMAIN,flow.google.com
-# Google Labs visual generation backend.
-DOMAIN,aisandbox-pa.googleapis.com
-
 DOMAIN-SUFFIX,midjourney.com
 DOMAIN-SUFFIX,midjourney.io
 DOMAIN-SUFFIX,stability.ai
 DOMAIN-SUFFIX,runwayml.com
 DOMAIN-SUFFIX,civitai.com
-DOMAIN-SUFFIX,clipdrop.co
 DOMAIN,openart.ai
 DOMAIN,mcp.openart.ai
 
@@ -204,18 +206,6 @@ DOMAIN,pika.art
 DOMAIN,creation.pika.art
 DOMAIN,create.pika.art
 DOMAIN,api.dev.pika.art
-# Kling AI web studio and current international API.
-# https://kling.ai/document-api/apiReference/commonInfo
-DOMAIN,kling.ai
-DOMAIN,app.klingai.com
-DOMAIN,api-singapore.klingai.com
-# Hailuo AI workspace and MiniMax video generation API.
-# https://platform.minimax.io/docs/api-reference/video-generation-v2-create
-DOMAIN,hailuoai.video
-DOMAIN,api.minimax.io
-# Adobe Firefly video workspace.
-# https://firefly.adobe.com/generate/video
-DOMAIN,firefly.adobe.com
 # Vidu video workspace and API.
 # https://platform.vidu.com/docs/text-to-video
 DOMAIN,www.vidu.com
@@ -225,22 +215,19 @@ DOMAIN,api.vidu.com
 DOMAIN,app.pixverse.ai
 DOMAIN,app-api.pixverse.ai
 
-# > Midjourney access via Discord
-DOMAIN-SUFFIX,discord.com
-DOMAIN-SUFFIX,discordapp.com
-
 # --- 08. Meta AI & Muse ---
 # > Product websites and app links
 # Sources: https://ai.meta.com/muse/
 #          https://www.meta.com/help/subscriptions/1021145227643680/
 DOMAIN-SUFFIX,muse.ai
-# > Muse Secure VM transport observed in Surge capture (2026-09-24)
-# WebSocket /v1/noise from muse.ai; observed host, not a published IP allowlist.
-DOMAIN,hatch.metaaivm.com
-DOMAIN,meta.ai
 DOMAIN,ai.meta.com
 # Muse supplemental terms host; this alone does not establish an app API endpoint.
 DOMAIN,agent.meta.ai
+# > Meta AI workspace and visual creation
+DOMAIN,meta.ai
+# > Muse Secure VM transport observed in Surge capture (2026-09-24)
+# WebSocket /v1/noise from muse.ai; observed host, not a published IP allowlist.
+DOMAIN,hatch.metaaivm.com
 # > Model API and developer portal
 # Source: https://dev.meta.ai/resources/blog/build-with-muse-spark
 DOMAIN,api.meta.ai
@@ -284,8 +271,6 @@ DOMAIN,cloud.dify.ai
 DOMAIN,api.dify.ai
 DOMAIN,console.groq.com
 DOMAIN,api.groq.com
-DOMAIN,app.jasper.ai
-DOMAIN,api.jasper.ai
 DOMAIN,openrouter.ai
 DOMAIN,gateway.ai.cloudflare.com
 # > Coding assistants and cloud services
@@ -294,6 +279,35 @@ DOMAIN,cloud.zed.dev
 DOMAIN,server.codeium.com
 DOMAIN,inference.codeium.com
 DOMAIN,server.self-serve.windsurf.com
+
+# > Adobe
+# Adobe Firefly video workspace.
+# https://firefly.adobe.com/generate/video
+DOMAIN,firefly.adobe.com
+
+# > Jasper
+DOMAIN,app.jasper.ai
+DOMAIN,api.jasper.ai
+# Clipdrop image tools and API.
+# https://clipdrop.co/apis
+DOMAIN-SUFFIX,clipdrop.co
+
+# > Kuaishou
+# Kling AI web studio and current international API.
+# https://kling.ai/document-api/apiReference/commonInfo
+DOMAIN,kling.ai
+DOMAIN,app.klingai.com
+DOMAIN,api-singapore.klingai.com
+
+# > MiniMax
+# Hailuo AI workspace and MiniMax video generation API.
+# https://platform.minimax.io/docs/api-reference/video-generation-v2-create
+DOMAIN,hailuoai.video
+DOMAIN,api.minimax.io
+
+# > Midjourney access via Discord
+DOMAIN-SUFFIX,discord.com
+DOMAIN-SUFFIX,discordapp.com
 
 # --- 11. Legacy IP Compatibility ---
 # Exact IP ranges retained; this is not the current complete ChatGPT Voice list.
