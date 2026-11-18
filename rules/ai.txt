@@ -1,7 +1,7 @@
 # ===================================================
 # AI Services & Selected Supporting Sites
 # Scope for additions: AI products, model APIs, and required sign-in or verification services.
-# Dedicated video-download hosts are not intentionally included.
+# Use exact hosts for delivery of AI-generated images, videos, and files.
 # Shared hosts can carry mixed content; domain rules cannot filter URL paths.
 # Routing policy and priority are set by the importing Surge profile.
 # Reviewed: 2026-09-24
@@ -145,9 +145,7 @@ DOMAIN,origin-tracker.githubusercontent.com
 DOMAIN,default.exp-tas.com
 
 # --- 06. xAI, Perplexity, DeepSeek & Others ---
-# Explicit xAI hosts avoid the broad x.ai media-download coverage.
-# vidgen.x.ai and files-cdn.x.ai are intentionally absent from domain rules.
-# Source: https://docs.x.ai/developers/model-capabilities/imagine/files
+# xAI product, account, and API hosts.
 DOMAIN,x.ai
 DOMAIN,www.x.ai
 DOMAIN,grok.x.ai
@@ -155,7 +153,12 @@ DOMAIN-SUFFIX,api.x.ai
 DOMAIN,console.x.ai
 DOMAIN,accounts.x.ai
 DOMAIN,docs.x.ai
+# Grok generated image and video results and Files API public links.
+# The Files CDN also serves public links to uploaded files.
+# Source: https://docs.x.ai/developers/model-capabilities/imagine/files/outputs
 DOMAIN,imgen.x.ai
+DOMAIN,vidgen.x.ai
+DOMAIN,files-cdn.x.ai
 DOMAIN-SUFFIX,grok.com
 DOMAIN-SUFFIX,grokipedia.com
 DOMAIN-SUFFIX,perplexity.ai
