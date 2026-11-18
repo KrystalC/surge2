@@ -56,6 +56,9 @@ DOMAIN,ai.google.dev
 DOMAIN-SUFFIX,gemini.google
 DOMAIN,g.ai
 DOMAIN-SUFFIX,notebooklm.google
+# Google Flow video creation workspace.
+# https://flow.google.com/
+DOMAIN,flow.google.com
 DOMAIN,jules.google.com
 DOMAIN,antigravity.google
 # > AI APIs & Backend
@@ -174,7 +177,7 @@ DOMAIN-SUFFIX,suno.ai
 DOMAIN-SUFFIX,udio.com
 DOMAIN-SUFFIX,elevenlabs.io
 
-# --- 07. Generative Art ---
+# --- 07. Generative Art & Video ---
 DOMAIN-SUFFIX,midjourney.com
 DOMAIN-SUFFIX,midjourney.io
 DOMAIN-SUFFIX,discord.com
@@ -185,6 +188,39 @@ DOMAIN-SUFFIX,civitai.com
 DOMAIN-SUFFIX,clipdrop.co
 DOMAIN,openart.ai
 DOMAIN,mcp.openart.ai
+
+# > Video creation workspaces and APIs
+# Luma workspaces and Dream Machine API.
+# https://docs.lumalabs.ai/reference/creategeneration
+DOMAIN,app.lumalabs.ai
+DOMAIN,dream-machine.lumalabs.ai
+DOMAIN,api.lumalabs.ai
+# Pika Video Studio, sign-in, and video generation API.
+# https://dev.pika.art/models/pika/pika-h3-flex/text-to-video
+DOMAIN,pika.art
+DOMAIN,creation.pika.art
+DOMAIN,create.pika.art
+DOMAIN,api.dev.pika.art
+# Kling AI web studio and current international API.
+# https://kling.ai/document-api/apiReference/commonInfo
+DOMAIN,kling.ai
+DOMAIN,app.klingai.com
+DOMAIN,api-singapore.klingai.com
+# Hailuo AI workspace and MiniMax video generation API.
+# https://platform.minimax.io/docs/api-reference/video-generation-v2-create
+DOMAIN,hailuoai.video
+DOMAIN,api.minimax.io
+# Adobe Firefly video workspace.
+# https://firefly.adobe.com/generate/video
+DOMAIN,firefly.adobe.com
+# Vidu video workspace and API.
+# https://platform.vidu.com/docs/text-to-video
+DOMAIN,www.vidu.com
+DOMAIN,api.vidu.com
+# PixVerse video workspace and generation API.
+# https://docs.platform.pixverse.ai/start-here-2394989m0
+DOMAIN,app.pixverse.ai
+DOMAIN,app-api.pixverse.ai
 
 # --- 08. Meta AI & Muse ---
 # > Product websites and app links
