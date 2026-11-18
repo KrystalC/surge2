@@ -5,6 +5,9 @@
 # Shared hosts can carry mixed content; domain rules cannot filter URL paths.
 # Routing policy and priority are set by the importing Surge profile.
 # Reviewed: 2026-09-24
+# Domain coverage cross-checked against Sukka's AIGC list (2026-11-15).
+# Source: https://ruleset.skk.moe/List/non_ip/ai.conf
+# Upstream AGPL-3.0: https://github.com/SukkaW/Surge/blob/master/LICENSE
 # ===================================================
 
 # --- 01. Shared Security, Verification & Auth ---
@@ -49,6 +52,12 @@ DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
 DOMAIN-SUFFIX,notebooklm.google.com
 DOMAIN-SUFFIX,generativeai.google
+DOMAIN,ai.google.dev
+DOMAIN-SUFFIX,gemini.google
+DOMAIN-SUFFIX,g.ai
+DOMAIN-SUFFIX,notebooklm.google
+DOMAIN,jules.google.com
+DOMAIN,antigravity.google
 # > AI APIs & Backend
 DOMAIN-SUFFIX,generativelanguage.googleapis.com
 DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
@@ -56,6 +65,14 @@ DOMAIN-SUFFIX,geller-pa.googleapis.com
 # Gemini app backend.
 # Source: https://github.com/v2fly/domain-list-community/blob/master/data/google-deepmind
 DOMAIN,robinfrontend-pa.googleapis.com
+# > Google AI coding and creation services
+DOMAIN,antigravity-unleash.goog
+DOMAIN,aida.googleapis.com
+DOMAIN,aicode.googleapis.com
+DOMAIN,aisandbox-pa.googleapis.com
+DOMAIN-SUFFIX,cloudcode-pa.googleapis.com
+DOMAIN,daily-cloudcode-pa.googleapis.com
+DOMAIN,daily-cloudcode-pa.sandbox.googleapis.com
 # > Shared Google web clients
 DOMAIN-SUFFIX,clients6.google.com
 DOMAIN-SUFFIX,client-channel.google.com
@@ -70,6 +87,9 @@ DOMAIN-SUFFIX,ogs.google.com
 DOMAIN-SUFFIX,oauth2.googleapis.com
 DOMAIN-SUFFIX,id.google.com
 DOMAIN-SUFFIX,profile.google.com
+# > Google sign-in continuation to Gemini
+# Surge requires access to the full HTTPS URL for this rule to match.
+URL-REGEX,^https://www\.google\.com/[^?#]*\?(?:[^#]*&)?continue=https://gemini\.google\.com(?:[/?&#]|$)
 # > Shared Google static assets (not exclusive to AI)
 DOMAIN-SUFFIX,gstatic.com
 # > AI Helpers (Translate/Lens)
@@ -80,6 +100,8 @@ DOMAIN-SUFFIX,assistant.google.com
 
 # --- 03. OpenAI (ChatGPT) ---
 DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,chat.com
+DOMAIN-SUFFIX,sora.com
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
@@ -97,6 +119,7 @@ DOMAIN-KEYWORD,chatgpt
 # --- 04. Anthropic (Claude) ---
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,clau.de
 DOMAIN-SUFFIX,anthropicusercontent.com
 # Explicit login and browser-bridge hosts; broad user-content hosts not added.
 # Source: https://code.claude.com/docs/en/network-config
@@ -120,6 +143,8 @@ DOMAIN-SUFFIX,copilot.githubusercontent.com
 # Source: https://docs.github.com/en/copilot/reference/copilot-allowlist-reference
 DOMAIN,origin-tracker.githubusercontent.com
 DOMAIN,default.exp-tas.com
+# Shared GitHub API used by Copilot and other GitHub clients.
+DOMAIN,api.github.com
 
 # --- 06. xAI, Perplexity, DeepSeek & Others ---
 # Explicit xAI hosts avoid the broad x.ai media-download coverage.
@@ -163,6 +188,7 @@ DOMAIN-SUFFIX,stability.ai
 DOMAIN-SUFFIX,runwayml.com
 DOMAIN-SUFFIX,civitai.com
 DOMAIN-SUFFIX,clipdrop.co
+DOMAIN-SUFFIX,openart.ai
 
 # --- 08. Meta AI & Muse ---
 # > Product websites and app links
@@ -172,7 +198,7 @@ DOMAIN-SUFFIX,muse.ai
 # > Muse Secure VM transport observed in Surge capture (2026-09-24)
 # WebSocket /v1/noise from muse.ai; observed host, not a published IP allowlist.
 DOMAIN,hatch.metaaivm.com
-DOMAIN,meta.ai
+DOMAIN-SUFFIX,meta.ai
 DOMAIN,ai.meta.com
 # Muse supplemental terms host; this alone does not establish an app API endpoint.
 DOMAIN,agent.meta.ai
@@ -214,6 +240,18 @@ DOMAIN-SUFFIX,guzzoni.smoot.apple.com
 DOMAIN-SUFFIX,link.com
 DOMAIN,www.numberbarn.com
 DOMAIN-SUFFIX,typesafe.ai
+# > AI applications and gateways
+DOMAIN-SUFFIX,dify.ai
+DOMAIN-SUFFIX,groq.com
+DOMAIN-SUFFIX,jasper.ai
+DOMAIN,openrouter.ai
+DOMAIN,gateway.ai.cloudflare.com
+# > Coding assistants and cloud services
+DOMAIN,api.jetbrains.ai
+DOMAIN,cloud.zed.dev
+DOMAIN,server.codeium.com
+DOMAIN,inference.codeium.com
+DOMAIN,server.self-serve.windsurf.com
 
 # --- 11. Legacy IP Compatibility ---
 # Exact IP ranges retained; this is not the current complete ChatGPT Voice list.
