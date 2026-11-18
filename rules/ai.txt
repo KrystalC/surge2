@@ -23,6 +23,8 @@ DOMAIN,js.intercomcdn.com
 DOMAIN,cdn.workos.com
 DOMAIN-SUFFIX,launchdarkly.com
 DOMAIN-SUFFIX,recaptcha.net
+# hCaptcha verification uses rotating subdomains shared across sites.
+DOMAIN-SUFFIX,hcaptcha.com
 
 # --- 02. Google AI & Accounts ---
 # > AI Platforms
