@@ -53,6 +53,9 @@ DOMAIN-SUFFIX,generativeai.google
 DOMAIN-SUFFIX,generativelanguage.googleapis.com
 DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
 DOMAIN-SUFFIX,geller-pa.googleapis.com
+# Gemini app backend.
+# Source: https://github.com/v2fly/domain-list-community/blob/master/data/google-deepmind
+DOMAIN,robinfrontend-pa.googleapis.com
 # > Shared Google web clients
 DOMAIN-SUFFIX,clients6.google.com
 DOMAIN-SUFFIX,client-channel.google.com
