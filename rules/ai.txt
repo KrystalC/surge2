@@ -1,6 +1,6 @@
 # ===================================================
 # AI Services & Selected Supporting Sites
-# Scope: AI websites, login, APIs and selected supporting resources.
+# Scope for additions: AI products, model APIs, and required sign-in or verification services.
 # Dedicated video-download hosts are not intentionally included.
 # Shared hosts can carry mixed content; domain rules cannot filter URL paths.
 # Routing policy and priority are set by the importing Surge profile.
@@ -54,7 +54,7 @@ DOMAIN-SUFFIX,notebooklm.google.com
 DOMAIN-SUFFIX,generativeai.google
 DOMAIN,ai.google.dev
 DOMAIN-SUFFIX,gemini.google
-DOMAIN-SUFFIX,g.ai
+DOMAIN,g.ai
 DOMAIN-SUFFIX,notebooklm.google
 DOMAIN,jules.google.com
 DOMAIN,antigravity.google
@@ -66,13 +66,11 @@ DOMAIN-SUFFIX,geller-pa.googleapis.com
 # Source: https://github.com/v2fly/domain-list-community/blob/master/data/google-deepmind
 DOMAIN,robinfrontend-pa.googleapis.com
 # > Google AI coding and creation services
-DOMAIN,antigravity-unleash.goog
 DOMAIN,aida.googleapis.com
 DOMAIN,aicode.googleapis.com
 DOMAIN,aisandbox-pa.googleapis.com
-DOMAIN-SUFFIX,cloudcode-pa.googleapis.com
+DOMAIN,cloudcode-pa.googleapis.com
 DOMAIN,daily-cloudcode-pa.googleapis.com
-DOMAIN,daily-cloudcode-pa.sandbox.googleapis.com
 # > Shared Google web clients
 DOMAIN-SUFFIX,clients6.google.com
 DOMAIN-SUFFIX,client-channel.google.com
@@ -100,8 +98,7 @@ DOMAIN-SUFFIX,assistant.google.com
 
 # --- 03. OpenAI (ChatGPT) ---
 DOMAIN-SUFFIX,chatgpt.com
-DOMAIN-SUFFIX,chat.com
-DOMAIN-SUFFIX,sora.com
+DOMAIN,chat.com
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
@@ -119,7 +116,7 @@ DOMAIN-KEYWORD,chatgpt
 # --- 04. Anthropic (Claude) ---
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
-DOMAIN-SUFFIX,clau.de
+DOMAIN,clau.de
 DOMAIN-SUFFIX,anthropicusercontent.com
 # Explicit login and browser-bridge hosts; broad user-content hosts not added.
 # Source: https://code.claude.com/docs/en/network-config
@@ -143,8 +140,6 @@ DOMAIN-SUFFIX,copilot.githubusercontent.com
 # Source: https://docs.github.com/en/copilot/reference/copilot-allowlist-reference
 DOMAIN,origin-tracker.githubusercontent.com
 DOMAIN,default.exp-tas.com
-# Shared GitHub API used by Copilot and other GitHub clients.
-DOMAIN,api.github.com
 
 # --- 06. xAI, Perplexity, DeepSeek & Others ---
 # Explicit xAI hosts avoid the broad x.ai media-download coverage.
@@ -188,7 +183,8 @@ DOMAIN-SUFFIX,stability.ai
 DOMAIN-SUFFIX,runwayml.com
 DOMAIN-SUFFIX,civitai.com
 DOMAIN-SUFFIX,clipdrop.co
-DOMAIN-SUFFIX,openart.ai
+DOMAIN,openart.ai
+DOMAIN,mcp.openart.ai
 
 # --- 08. Meta AI & Muse ---
 # > Product websites and app links
@@ -198,7 +194,7 @@ DOMAIN-SUFFIX,muse.ai
 # > Muse Secure VM transport observed in Surge capture (2026-09-24)
 # WebSocket /v1/noise from muse.ai; observed host, not a published IP allowlist.
 DOMAIN,hatch.metaaivm.com
-DOMAIN-SUFFIX,meta.ai
+DOMAIN,meta.ai
 DOMAIN,ai.meta.com
 # Muse supplemental terms host; this alone does not establish an app API endpoint.
 DOMAIN,agent.meta.ai
@@ -241,9 +237,12 @@ DOMAIN-SUFFIX,link.com
 DOMAIN,www.numberbarn.com
 DOMAIN-SUFFIX,typesafe.ai
 # > AI applications and gateways
-DOMAIN-SUFFIX,dify.ai
-DOMAIN-SUFFIX,groq.com
-DOMAIN-SUFFIX,jasper.ai
+DOMAIN,cloud.dify.ai
+DOMAIN,api.dify.ai
+DOMAIN,console.groq.com
+DOMAIN,api.groq.com
+DOMAIN,app.jasper.ai
+DOMAIN,api.jasper.ai
 DOMAIN,openrouter.ai
 DOMAIN,gateway.ai.cloudflare.com
 # > Coding assistants and cloud services
