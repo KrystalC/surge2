@@ -58,6 +58,7 @@ DOMAIN,g.ai
 DOMAIN-SUFFIX,notebooklm.google
 DOMAIN,jules.google.com
 DOMAIN,antigravity.google
+DOMAIN,antigravity-unleash.goog
 # > AI APIs & Backend
 DOMAIN-SUFFIX,generativelanguage.googleapis.com
 DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
