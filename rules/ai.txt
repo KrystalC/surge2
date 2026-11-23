@@ -281,6 +281,11 @@ DOMAIN,server.codeium.com
 DOMAIN,inference.codeium.com
 DOMAIN,server.self-serve.windsurf.com
 
+# AWS (Amazon Quick): Desktop backend for inference, streaming, and search.
+DOMAIN-WILDCARD,qbs-cell*.dp.appintegrations.us-east-1.prod.plato.ai.aws.dev
+# AWS: Shared regional OIDC authentication endpoint.
+DOMAIN,oidc.us-east-1.amazonaws.com
+
 # > Adobe
 # Adobe Firefly video workspace.
 # https://firefly.adobe.com/generate/video
